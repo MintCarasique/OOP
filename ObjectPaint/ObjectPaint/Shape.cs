@@ -69,10 +69,10 @@ namespace objectPaint
         public override Bitmap Draw(Bitmap bmp)
         {
             Pen pen = new Pen(Color.DarkCyan);
-            Point[] point = { new Point(300, 10), new Point(200, 70), new Point(250, 200), new Point(350, 200), new Point(400, 70) };
+            Point[] pentagonPoints = { new Point(300, 10), new Point(200, 70), new Point(250, 200), new Point(350, 200), new Point(400, 70) };
 
             Graphics graph = Graphics.FromImage(bmp);
-            graph.DrawPolygon(pen, point);
+            graph.DrawPolygon(pen, pentagonPoints);
 
             return bmp;
         }
@@ -83,10 +83,10 @@ namespace objectPaint
         public override Bitmap Draw(Bitmap bmp)
         {
             Pen pen = new Pen(Color.Violet);
-            Point[] point = { new Point(450, 10), new Point(400, 50), new Point(400, 100), new Point(450, 150), new Point(500, 100), new Point(500, 50) };
+            Point[] hexagonPoints = { new Point(450, 10), new Point(400, 50), new Point(400, 100), new Point(450, 150), new Point(500, 100), new Point(500, 50) };
 
             Graphics graph = Graphics.FromImage(bmp);
-            graph.DrawPolygon(pen, point);
+            graph.DrawPolygon(pen, hexagonPoints);
 
             return bmp;
 

@@ -51,7 +51,7 @@
             // 
             // squareButton
             // 
-            this.squareButton.Location = new System.Drawing.Point(12, 70);
+            this.squareButton.Location = new System.Drawing.Point(12, 99);
             this.squareButton.Name = "squareButton";
             this.squareButton.Size = new System.Drawing.Size(75, 23);
             this.squareButton.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             // triangleButton
             // 
-            this.triangleButton.Location = new System.Drawing.Point(12, 99);
+            this.triangleButton.Location = new System.Drawing.Point(12, 70);
             this.triangleButton.Name = "triangleButton";
             this.triangleButton.Size = new System.Drawing.Size(75, 23);
             this.triangleButton.TabIndex = 2;
@@ -131,6 +131,7 @@
             this.Controls.Add(this.triangleButton);
             this.Controls.Add(this.squareButton);
             this.Controls.Add(this.circleButton);
+            this.MaximizeBox = false;
             this.Name = "mainForm";
             this.Text = "Lab1";
             ((System.ComponentModel.ISupportInitialize)(this.shapePictureBox)).EndInit();
