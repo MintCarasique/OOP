@@ -40,57 +40,63 @@
             // 
             // circleButton
             // 
-            this.circleButton.Location = new System.Drawing.Point(12, 60);
+            this.circleButton.Location = new System.Drawing.Point(12, 93);
             this.circleButton.Name = "circleButton";
             this.circleButton.Size = new System.Drawing.Size(75, 23);
             this.circleButton.TabIndex = 0;
             this.circleButton.Text = "Circle";
             this.circleButton.UseVisualStyleBackColor = true;
+            this.circleButton.Click += new System.EventHandler(this.circleButton_Click);
             // 
             // squareButton
             // 
-            this.squareButton.Location = new System.Drawing.Point(12, 89);
+            this.squareButton.Location = new System.Drawing.Point(12, 122);
             this.squareButton.Name = "squareButton";
             this.squareButton.Size = new System.Drawing.Size(75, 23);
             this.squareButton.TabIndex = 1;
             this.squareButton.Text = "Square";
             this.squareButton.UseVisualStyleBackColor = true;
+            this.squareButton.Click += new System.EventHandler(this.squareButton_Click);
             // 
             // triangleButton
             // 
-            this.triangleButton.Location = new System.Drawing.Point(12, 118);
+            this.triangleButton.Location = new System.Drawing.Point(12, 151);
             this.triangleButton.Name = "triangleButton";
             this.triangleButton.Size = new System.Drawing.Size(75, 23);
             this.triangleButton.TabIndex = 2;
             this.triangleButton.Text = "Triangle";
             this.triangleButton.UseVisualStyleBackColor = true;
+            this.triangleButton.Click += new System.EventHandler(this.triangleButton_Click);
             // 
             // lineButton
             // 
-            this.lineButton.Location = new System.Drawing.Point(12, 31);
+            this.lineButton.Location = new System.Drawing.Point(12, 64);
             this.lineButton.Name = "lineButton";
             this.lineButton.Size = new System.Drawing.Size(75, 23);
             this.lineButton.TabIndex = 3;
             this.lineButton.Text = "Line";
             this.lineButton.UseVisualStyleBackColor = true;
+            this.lineButton.Click += new System.EventHandler(this.lineButton_Click);
             // 
             // pentagonButton
             // 
-            this.pentagonButton.Location = new System.Drawing.Point(12, 147);
+            this.pentagonButton.Location = new System.Drawing.Point(12, 180);
             this.pentagonButton.Name = "pentagonButton";
             this.pentagonButton.Size = new System.Drawing.Size(75, 23);
             this.pentagonButton.TabIndex = 4;
             this.pentagonButton.Text = "Pentagon";
             this.pentagonButton.UseVisualStyleBackColor = true;
+            this.pentagonButton.Click += new System.EventHandler(this.pentagonButton_Click);
             // 
             // hexagonButton
             // 
-            this.hexagonButton.Location = new System.Drawing.Point(12, 176);
+            this.hexagonButton.Location = new System.Drawing.Point(12, 209);
             this.hexagonButton.Name = "hexagonButton";
             this.hexagonButton.Size = new System.Drawing.Size(75, 23);
             this.hexagonButton.TabIndex = 5;
             this.hexagonButton.Text = "Hexagon";
             this.hexagonButton.UseVisualStyleBackColor = true;
+            this.hexagonButton.Click += new System.EventHandler(this.hexagonButton_Click);
             // 
             // shapePictureBox
             // 
@@ -114,7 +120,7 @@
             this.Controls.Add(this.squareButton);
             this.Controls.Add(this.circleButton);
             this.Name = "mainForm";
-            this.Text = "Form1";
+            this.Text = "Lab1";
             ((System.ComponentModel.ISupportInitialize)(this.shapePictureBox)).EndInit();
             this.ResumeLayout(false);
 

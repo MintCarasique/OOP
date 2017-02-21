@@ -1,1 +1,9 @@
 D:\Documents\4 Семестр\ООП\Lab1\ObjectPaint\ObjectPaint\bin\Debug\ObjectPaint.exe.config
+D:\Documents\4 Семестр\ООП\Lab1\ObjectPaint\ObjectPaint\bin\Debug\ObjectPaint.exe
+D:\Documents\4 Семестр\ООП\Lab1\ObjectPaint\ObjectPaint\bin\Debug\ObjectPaint.pdb
+D:\Documents\4 Семестр\ООП\Lab1\ObjectPaint\ObjectPaint\obj\Debug\ObjectPaint.csprojResolveAssemblyReference.cache
+D:\Documents\4 Семестр\ООП\Lab1\ObjectPaint\ObjectPaint\obj\Debug\ObjectPaint.mainForm.resources
+D:\Documents\4 Семестр\ООП\Lab1\ObjectPaint\ObjectPaint\obj\Debug\ObjectPaint.Properties.Resources.resources
+D:\Documents\4 Семестр\ООП\Lab1\ObjectPaint\ObjectPaint\obj\Debug\ObjectPaint.csproj.GenerateResource.Cache
+D:\Documents\4 Семестр\ООП\Lab1\ObjectPaint\ObjectPaint\obj\Debug\ObjectPaint.exe
+D:\Documents\4 Семестр\ООП\Lab1\ObjectPaint\ObjectPaint\obj\Debug\ObjectPaint.pdb
