@@ -62,5 +62,13 @@ namespace ObjectPaint
             Bmp = hexagon.Draw(Bmp);
             shapePictureBox.Image = Bmp;
         }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            shapePictureBox.Image = null;
+            Bmp.Dispose();
+            Bitmap bmp = new Bitmap(shapePictureBox.Width, shapePictureBox.Height);
+            Bmp = bmp;
+        }
     }
 }

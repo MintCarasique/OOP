@@ -35,6 +35,7 @@
             this.pentagonButton = new System.Windows.Forms.Button();
             this.hexagonButton = new System.Windows.Forms.Button();
             this.shapePictureBox = new System.Windows.Forms.PictureBox();
+            this.clearButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.shapePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,11 +108,22 @@
             this.shapePictureBox.TabIndex = 6;
             this.shapePictureBox.TabStop = false;
             // 
+            // clearButton
+            // 
+            this.clearButton.Location = new System.Drawing.Point(12, 272);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(75, 23);
+            this.clearButton.TabIndex = 7;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 307);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.shapePictureBox);
             this.Controls.Add(this.hexagonButton);
             this.Controls.Add(this.pentagonButton);
@@ -135,6 +147,7 @@
         private System.Windows.Forms.Button pentagonButton;
         private System.Windows.Forms.Button hexagonButton;
         private System.Windows.Forms.PictureBox shapePictureBox;
+        private System.Windows.Forms.Button clearButton;
     }
 }
 
