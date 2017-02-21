@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace objectPaint
+namespace logic
 {
    public abstract class Shape
     {
@@ -20,7 +20,6 @@ namespace objectPaint
             Pen pen = new Pen(Color.Black);
             graph.DrawLine(pen, 10, 10, 150, 200);
             return bmp;
-
         }
     }
 
@@ -50,15 +49,12 @@ namespace objectPaint
     
     class TriangleDrawer : Shape
     {
-
         public override Bitmap Draw(Bitmap bmp)
         {
             Pen pen = new Pen(Color.Red);
             Point[] trianglePoints = { new Point(200, 10), new Point(150, 150), new Point(300, 150) };
-
             Graphics graph = Graphics.FromImage(bmp);
             graph.DrawPolygon(pen, trianglePoints);
-
             return bmp;
         }
     }
@@ -70,10 +66,8 @@ namespace objectPaint
         {
             Pen pen = new Pen(Color.DarkCyan);
             Point[] pentagonPoints = { new Point(300, 10), new Point(200, 70), new Point(250, 200), new Point(350, 200), new Point(400, 70) };
-
             Graphics graph = Graphics.FromImage(bmp);
             graph.DrawPolygon(pen, pentagonPoints);
-
             return bmp;
         }
     }
@@ -84,12 +78,9 @@ namespace objectPaint
         {
             Pen pen = new Pen(Color.Violet);
             Point[] hexagonPoints = { new Point(450, 10), new Point(400, 50), new Point(400, 100), new Point(450, 150), new Point(500, 100), new Point(500, 50) };
-
             Graphics graph = Graphics.FromImage(bmp);
             graph.DrawPolygon(pen, hexagonPoints);
-
             return bmp;
-
         }
     }
   }

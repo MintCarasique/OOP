@@ -41,7 +41,7 @@
             // 
             // circleButton
             // 
-            this.circleButton.Location = new System.Drawing.Point(12, 41);
+            this.circleButton.Location = new System.Drawing.Point(93, 249);
             this.circleButton.Name = "circleButton";
             this.circleButton.Size = new System.Drawing.Size(75, 23);
             this.circleButton.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             // squareButton
             // 
-            this.squareButton.Location = new System.Drawing.Point(12, 99);
+            this.squareButton.Location = new System.Drawing.Point(255, 249);
             this.squareButton.Name = "squareButton";
             this.squareButton.Size = new System.Drawing.Size(75, 23);
             this.squareButton.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             // triangleButton
             // 
-            this.triangleButton.Location = new System.Drawing.Point(12, 70);
+            this.triangleButton.Location = new System.Drawing.Point(174, 249);
             this.triangleButton.Name = "triangleButton";
             this.triangleButton.Size = new System.Drawing.Size(75, 23);
             this.triangleButton.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // lineButton
             // 
-            this.lineButton.Location = new System.Drawing.Point(12, 12);
+            this.lineButton.Location = new System.Drawing.Point(12, 249);
             this.lineButton.Name = "lineButton";
             this.lineButton.Size = new System.Drawing.Size(75, 23);
             this.lineButton.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             // pentagonButton
             // 
-            this.pentagonButton.Location = new System.Drawing.Point(12, 128);
+            this.pentagonButton.Location = new System.Drawing.Point(336, 249);
             this.pentagonButton.Name = "pentagonButton";
             this.pentagonButton.Size = new System.Drawing.Size(75, 23);
             this.pentagonButton.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             // hexagonButton
             // 
-            this.hexagonButton.Location = new System.Drawing.Point(12, 157);
+            this.hexagonButton.Location = new System.Drawing.Point(417, 249);
             this.hexagonButton.Name = "hexagonButton";
             this.hexagonButton.Size = new System.Drawing.Size(75, 23);
             this.hexagonButton.TabIndex = 5;
@@ -102,7 +102,7 @@
             // shapePictureBox
             // 
             this.shapePictureBox.BackColor = System.Drawing.SystemColors.Window;
-            this.shapePictureBox.Location = new System.Drawing.Point(93, 12);
+            this.shapePictureBox.Location = new System.Drawing.Point(12, 12);
             this.shapePictureBox.Name = "shapePictureBox";
             this.shapePictureBox.Size = new System.Drawing.Size(604, 231);
             this.shapePictureBox.TabIndex = 6;
@@ -110,7 +110,7 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(12, 220);
+            this.clearButton.Location = new System.Drawing.Point(541, 249);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 7;
@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 253);
+            this.ClientSize = new System.Drawing.Size(626, 278);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.shapePictureBox);
             this.Controls.Add(this.hexagonButton);
