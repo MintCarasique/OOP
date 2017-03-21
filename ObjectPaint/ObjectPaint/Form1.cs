@@ -7,68 +7,94 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using logic;
 
 namespace ObjectPaint
 {
     public partial class mainForm : Form
     {
         private Bitmap Bmp;
+        public List<Shape> shp = new List<Shape>();
+        private bool press = false;
+        private Point one;
+        private Point two;
+        private Color Current = Color.Black;
+        private Shape temp;
+        private int x, y, w, h;
+        private int penWidth = 1;
+        private void shapePictureBox_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (temp != null && press)
+            {
+                two = e.Location;
+                if (temp is DrawLine)
+                {
+                    temp.Draw(Bmp, x, y, h, w, one, two);
+                    shapePictureBox.Image = Bmp;
+                    one = two;
+                }
+                shapePictureBox.Refresh();
+            }
+        }
+
+        private void shapePictureBox_Paint(object sender, PaintEventArgs e)
+        {
+            if (temp != null && press)
+            {
+                if (!(temp is DrawLine))
+                {
+                    countCanvasPoints();
+                    temp.DrawE(x, y, h, w, one, two, e);
+                }
+            }
+        }
+
+        private void lineButton_Click(object sender, EventArgs e)
+        {
+            DrawLine temp = new DrawLine(Current, penWidth);
+            this.temp = temp;
+        }
+
+        private void shapePictureBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (temp != null)
+            {
+                press = false;
+                Bmp = temp.Draw(Bmp, x, y, h, w, one, two);
+                shapePictureBox.Image = Bmp;
+            }
+        }
+
+        private void shapePictureBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (temp != null)
+            {
+                press = true;
+                one = e.Location;
+            }
+        }
+
+        private void widthTrackBar_Scroll(object sender, EventArgs e)
+        {
+            penWidth = widthTrackBar.Value;
+        }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+            DoubleBuffered = true;
+        }
+        
         public mainForm()
         {
             InitializeComponent();
             Bitmap bmp = new Bitmap(shapePictureBox.Width, shapePictureBox.Height);
             Bmp = bmp;
         }
-
-        private void lineButton_Click(object sender, EventArgs e)
+        public void countCanvasPoints()
         {
-            LineDrawer line = new LineDrawer();
-            Bmp = line.Draw(Bmp);
-            shapePictureBox.Image = Bmp;
-        }
-
-        private void circleButton_Click(object sender, EventArgs e)
-        {
-            CircleDrawer circle = new CircleDrawer();
-            Bmp = circle.Draw(Bmp);
-            shapePictureBox.Image = Bmp;
-        }
-
-        private void squareButton_Click(object sender, EventArgs e)
-        {
-            SquareDrawer square = new SquareDrawer();
-            Bmp = square.Draw(Bmp);
-            shapePictureBox.Image = Bmp;
-        }
-
-        private void triangleButton_Click(object sender, EventArgs e)
-        {
-            TriangleDrawer triangle = new TriangleDrawer();
-            Bmp = triangle.Draw(Bmp);
-            shapePictureBox.Image = Bmp;
-        }
-
-        private void pentagonButton_Click(object sender, EventArgs e)
-        {
-            PentagonDrawer pentagon = new PentagonDrawer();
-            Bmp = pentagon.Draw(Bmp);
-            shapePictureBox.Image = Bmp;
-        }
-
-        private void hexagonButton_Click(object sender, EventArgs e)
-        {
-            HexagonDrawer hexagon = new HexagonDrawer();
-            Bmp = hexagon.Draw(Bmp);
-            shapePictureBox.Image = Bmp;
-        }
-
-        private void clearButton_Click(object sender, EventArgs e)
-        {
-            shapePictureBox.Image = null;
-            Bmp.Dispose();
-            Bitmap bmp = new Bitmap(shapePictureBox.Width, shapePictureBox.Height);
-            Bmp = bmp;
+            x = Math.Min(one.X, two.X);
+            y = Math.Min(one.Y, two.Y);
+            h = Math.Abs(one.X - two.X);
+            w = Math.Abs(one.Y - two.Y);
         }
     }
 }
