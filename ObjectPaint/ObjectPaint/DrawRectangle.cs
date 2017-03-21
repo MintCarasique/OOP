@@ -3,11 +3,11 @@ using System.Windows.Forms;
 
 namespace ObjectPaint
 {
-    class DrawStraightLine : Shape
+    class DrawRectangle : Shape
     {
         private Color clr;
         private int pWidth;
-        public DrawStraightLine(Color clr, int pWidth)
+        public DrawRectangle(Color clr, int pWidth)
         {
             this.clr = clr;
             this.pWidth = pWidth;
@@ -15,17 +15,18 @@ namespace ObjectPaint
         public override Bitmap Draw(Bitmap bmp, int x, int y, int h, int w, Point first, Point second)
         {
             Graphics graph = Graphics.FromImage(bmp);
-            graph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             Pen pen = new Pen(clr);
             pen.Width = pWidth;
-            graph.DrawLine(pen, first.X, first.Y, second.X, second.Y);
+            graph.DrawRectangle(pen, x, y, h, w);
+            graph.Save();
             return bmp;
         }
         public override void DrawE(int x, int y, int h, int w, Point first, Point second, PaintEventArgs e)
         {
             Pen pen = new Pen(clr);
             pen.Width = pWidth;
-            e.Graphics.DrawLine(pen, first.X, first.Y, second.X, second.Y);
+            Rectangle rect = new Rectangle(x, y, h, w);
+            e.Graphics.DrawRectangle(pen, rect);
         }
     }
 }

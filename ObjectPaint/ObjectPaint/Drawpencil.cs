@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace ObjectPaint
@@ -33,7 +28,7 @@ namespace ObjectPaint
         {
             Pen pen = new Pen(clr);
             pen.Width = pWidth;
-            e.Graphics.DrawLine(pen, first.X,first.X,second.X,second.Y);
+            e.Graphics.DrawLine(pen, first.X,first.Y,second.X,second.Y);
         }
     }
 }

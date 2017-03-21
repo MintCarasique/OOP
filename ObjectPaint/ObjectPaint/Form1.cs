@@ -106,6 +106,12 @@ namespace ObjectPaint
 
         }
 
+        private void rectangleButton_Click(object sender, EventArgs e)
+        {
+            DrawRectangle temp = new DrawRectangle(Current, penWidth);
+            this.temp = temp;
+        }
+
         private void mainForm_Load(object sender, EventArgs e)
         {
             DoubleBuffered = true;
@@ -120,8 +126,7 @@ namespace ObjectPaint
         public void countCanvasPoints()
         {
             x = Math.Min(one.X, two.X);
-            //y = Math.Min(one.Y, two.Y);
-            y = one.Y;
+            y = Math.Min(one.Y, two.Y);
             h = Math.Abs(one.X - two.X);
             w = Math.Abs(one.Y - two.Y);
             

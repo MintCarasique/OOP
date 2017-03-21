@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DrawRectangle.cs" />
     <Compile Include="DrawStraightLine.cs" />
     <Compile Include="DrawPencil.cs" />
     <Compile Include="Form1.cs">

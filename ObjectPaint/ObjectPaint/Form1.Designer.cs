@@ -33,6 +33,7 @@
             this.widthTrackBar = new System.Windows.Forms.TrackBar();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.rectangleButton = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.shapePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthTrackBar)).BeginInit();
             this.SuspendLayout();
@@ -85,7 +86,7 @@
             // 
             this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(63, 368);
+            this.checkBox2.Location = new System.Drawing.Point(63, 369);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(37, 23);
             this.checkBox2.TabIndex = 8;
@@ -93,11 +94,24 @@
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             this.checkBox2.Click += new System.EventHandler(this.lineButton_Click_1);
             // 
+            // rectangleButton
+            // 
+            this.rectangleButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rectangleButton.AutoSize = true;
+            this.rectangleButton.Location = new System.Drawing.Point(106, 369);
+            this.rectangleButton.Name = "rectangleButton";
+            this.rectangleButton.Size = new System.Drawing.Size(66, 23);
+            this.rectangleButton.TabIndex = 9;
+            this.rectangleButton.Text = "Rectangle";
+            this.rectangleButton.UseVisualStyleBackColor = true;
+            this.rectangleButton.Click += new System.EventHandler(this.rectangleButton_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 403);
+            this.Controls.Add(this.rectangleButton);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.widthTrackBar);
             this.Controls.Add(this.checkBox1);
@@ -120,6 +134,7 @@
         private System.Windows.Forms.TrackBar widthTrackBar;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox rectangleButton;
     }
 }
 
