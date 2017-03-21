@@ -22,6 +22,7 @@ namespace ObjectPaint
         {
 
             Graphics graph = Graphics.FromImage(bmp);
+            graph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             Pen pen = new Pen(clr);
             pen.Width = pWidth;
             graph.DrawLine(pen, first.X,first.Y,second.X,second.Y);
