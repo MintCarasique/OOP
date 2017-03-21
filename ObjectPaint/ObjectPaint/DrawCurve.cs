@@ -18,8 +18,9 @@ namespace ObjectPaint
         {
             Pen pen = new Pen(clr);
             pen.Width = pWidth;
-            Point[] point = { new Point(first.X, first.Y), new Point(second.X, second.Y), new Point(first.X, second.Y) };
+            Point[] point = { new Point(first.X, first.Y), new Point(second.X, first.Y), new Point(second.X, second.Y), new Point(first.X, second.Y) };
             Graphics graph = Graphics.FromImage(bmp);
+            graph.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             graph.DrawClosedCurve(pen, point);
             graph.Save();
             return bmp;
@@ -28,7 +29,7 @@ namespace ObjectPaint
         {
             Pen pen = new Pen(clr);
             pen.Width = pWidth;
-            PointF[] point = { new PointF(first.X, first.Y), new PointF(second.X, second.Y), new PointF(first.X, second.Y) };
+            PointF[] point = { new Point(first.X, first.Y), new Point(second.X, first.Y), new Point(second.X, second.Y), new Point(first.X, second.Y) };
             e.Graphics.DrawClosedCurve(pen, point);
         }
     }
