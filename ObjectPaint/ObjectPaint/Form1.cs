@@ -21,13 +21,14 @@ namespace ObjectPaint
         private Shape temp;
         private int x, y, w, h;
         private int penWidth = 1;
+
         private void shapePictureBox_MouseMove(object sender, MouseEventArgs e)
         {
             if (temp != null && press)
             {
                 two = e.Location;
                 if (temp is DrawPencil)
-                {
+                {                    
                     temp.Draw(Bmp, x, y, h, w, one, two);
                     shapePictureBox.Image = Bmp;
                     one = two;
@@ -40,6 +41,7 @@ namespace ObjectPaint
         {
             if (temp != null && press)
             {
+                
                 if (!(temp is DrawPencil))
                 {
                     countCanvasPoints();
@@ -48,7 +50,7 @@ namespace ObjectPaint
             }
         }
 
-        private void lineButton_Click(object sender, EventArgs e)
+        private void pencilButton_Click(object sender, EventArgs e)
         {
             DrawPencil temp = new DrawPencil(Current, penWidth);
             this.temp = temp;
@@ -88,6 +90,22 @@ namespace ObjectPaint
             Bmp = bmp;
         }
 
+        private void lineButton_Click_1(object sender, EventArgs e)
+        {
+            DrawStraightLine temp = new DrawStraightLine(Current, penWidth);
+            this.temp = temp;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void mainForm_Load(object sender, EventArgs e)
         {
             DoubleBuffered = true;
@@ -102,9 +120,11 @@ namespace ObjectPaint
         public void countCanvasPoints()
         {
             x = Math.Min(one.X, two.X);
-            y = Math.Min(one.Y, two.Y);
+            //y = Math.Min(one.Y, two.Y);
+            y = one.Y;
             h = Math.Abs(one.X - two.X);
             w = Math.Abs(one.Y - two.Y);
+            
         }
     }
 }
