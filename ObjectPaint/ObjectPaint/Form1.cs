@@ -77,8 +77,7 @@ namespace ObjectPaint
 
         private void widthTrackBar_Scroll(object sender, EventArgs e)
         {
-            penWidth = widthTrackBar.Value;
-            
+            penWidth = widthTrackBar.Value;            
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -96,19 +95,21 @@ namespace ObjectPaint
             this.temp = temp;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void rectangleButton_Click(object sender, EventArgs e)
         {
             DrawRectangle temp = new DrawRectangle(Current, penWidth);
+            this.temp = temp;
+        }
+
+        private void circleButton_Click(object sender, EventArgs e)
+        {
+            DrawCircle temp = new DrawCircle(Current, penWidth);
+            this.temp = temp;
+        }
+
+        private void triangleButton_Click(object sender, EventArgs e)
+        {
+            DrawTriangle temp = new DrawTriangle(Current, penWidth);
             this.temp = temp;
         }
 

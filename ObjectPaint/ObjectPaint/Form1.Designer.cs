@@ -31,9 +31,11 @@
             this.shapePictureBox = new System.Windows.Forms.PictureBox();
             this.clearButton = new System.Windows.Forms.Button();
             this.widthTrackBar = new System.Windows.Forms.TrackBar();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.pencilButton = new System.Windows.Forms.CheckBox();
+            this.LineButton = new System.Windows.Forms.CheckBox();
             this.rectangleButton = new System.Windows.Forms.CheckBox();
+            this.circleButton = new System.Windows.Forms.Button();
+            this.triangleButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.shapePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthTrackBar)).BeginInit();
             this.SuspendLayout();
@@ -71,28 +73,26 @@
             this.widthTrackBar.Value = 1;
             this.widthTrackBar.Scroll += new System.EventHandler(this.widthTrackBar_Scroll);
             // 
-            // checkBox1
+            // pencilButton
             // 
-            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox1.Location = new System.Drawing.Point(13, 368);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(44, 24);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Pencil";
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            this.checkBox1.Click += new System.EventHandler(this.pencilButton_Click);
+            this.pencilButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.pencilButton.Location = new System.Drawing.Point(13, 368);
+            this.pencilButton.Name = "pencilButton";
+            this.pencilButton.Size = new System.Drawing.Size(44, 24);
+            this.pencilButton.TabIndex = 0;
+            this.pencilButton.Text = "Pencil";
+            this.pencilButton.Click += new System.EventHandler(this.pencilButton_Click);
             // 
-            // checkBox2
+            // LineButton
             // 
-            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(63, 369);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(37, 23);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "Line";
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            this.checkBox2.Click += new System.EventHandler(this.lineButton_Click_1);
+            this.LineButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.LineButton.AutoSize = true;
+            this.LineButton.Location = new System.Drawing.Point(63, 369);
+            this.LineButton.Name = "LineButton";
+            this.LineButton.Size = new System.Drawing.Size(37, 23);
+            this.LineButton.TabIndex = 8;
+            this.LineButton.Text = "Line";
+            this.LineButton.Click += new System.EventHandler(this.lineButton_Click_1);
             // 
             // rectangleButton
             // 
@@ -106,15 +106,37 @@
             this.rectangleButton.UseVisualStyleBackColor = true;
             this.rectangleButton.Click += new System.EventHandler(this.rectangleButton_Click);
             // 
+            // circleButton
+            // 
+            this.circleButton.Location = new System.Drawing.Point(178, 369);
+            this.circleButton.Name = "circleButton";
+            this.circleButton.Size = new System.Drawing.Size(48, 23);
+            this.circleButton.TabIndex = 10;
+            this.circleButton.Text = "Circle";
+            this.circleButton.UseVisualStyleBackColor = true;
+            this.circleButton.Click += new System.EventHandler(this.circleButton_Click);
+            // 
+            // triangleButton
+            // 
+            this.triangleButton.Location = new System.Drawing.Point(232, 369);
+            this.triangleButton.Name = "triangleButton";
+            this.triangleButton.Size = new System.Drawing.Size(53, 23);
+            this.triangleButton.TabIndex = 11;
+            this.triangleButton.Text = "Triangle";
+            this.triangleButton.UseVisualStyleBackColor = true;
+            this.triangleButton.Click += new System.EventHandler(this.triangleButton_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 403);
+            this.Controls.Add(this.triangleButton);
+            this.Controls.Add(this.circleButton);
             this.Controls.Add(this.rectangleButton);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.LineButton);
             this.Controls.Add(this.widthTrackBar);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.pencilButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.shapePictureBox);
             this.MaximizeBox = false;
@@ -132,9 +154,11 @@
         private System.Windows.Forms.PictureBox shapePictureBox;
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.TrackBar widthTrackBar;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox pencilButton;
+        private System.Windows.Forms.CheckBox LineButton;
         private System.Windows.Forms.CheckBox rectangleButton;
+        private System.Windows.Forms.Button circleButton;
+        private System.Windows.Forms.Button triangleButton;
     }
 }
 
