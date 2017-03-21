@@ -113,6 +113,12 @@ namespace ObjectPaint
             this.temp = temp;
         }
 
+        private void curveButton_Click(object sender, EventArgs e)
+        {
+            DrawCurve temp = new DrawCurve(Current, penWidth);
+            this.temp = temp;
+        }
+
         private void mainForm_Load(object sender, EventArgs e)
         {
             DoubleBuffered = true;
@@ -129,8 +135,7 @@ namespace ObjectPaint
             x = Math.Min(one.X, two.X);
             y = Math.Min(one.Y, two.Y);
             h = Math.Abs(one.X - two.X);
-            w = Math.Abs(one.Y - two.Y);
-            
+            w = Math.Abs(one.Y - two.Y);            
         }
     }
 }

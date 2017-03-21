@@ -36,6 +36,8 @@
             this.rectangleButton = new System.Windows.Forms.CheckBox();
             this.circleButton = new System.Windows.Forms.Button();
             this.triangleButton = new System.Windows.Forms.Button();
+            this.curveButton = new System.Windows.Forms.Button();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.shapePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthTrackBar)).BeginInit();
             this.SuspendLayout();
@@ -126,11 +128,22 @@
             this.triangleButton.UseVisualStyleBackColor = true;
             this.triangleButton.Click += new System.EventHandler(this.triangleButton_Click);
             // 
+            // curveButton
+            // 
+            this.curveButton.Location = new System.Drawing.Point(291, 369);
+            this.curveButton.Name = "curveButton";
+            this.curveButton.Size = new System.Drawing.Size(44, 23);
+            this.curveButton.TabIndex = 12;
+            this.curveButton.Text = "Curve";
+            this.curveButton.UseVisualStyleBackColor = true;
+            this.curveButton.Click += new System.EventHandler(this.curveButton_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 403);
+            this.Controls.Add(this.curveButton);
             this.Controls.Add(this.triangleButton);
             this.Controls.Add(this.circleButton);
             this.Controls.Add(this.rectangleButton);
@@ -159,6 +172,8 @@
         private System.Windows.Forms.CheckBox rectangleButton;
         private System.Windows.Forms.Button circleButton;
         private System.Windows.Forms.Button triangleButton;
+        private System.Windows.Forms.Button curveButton;
+        private System.Windows.Forms.ColorDialog colorDialog;
     }
 }
 
