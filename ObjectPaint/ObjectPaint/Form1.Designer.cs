@@ -56,6 +56,7 @@
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 1;
             this.clearButton.Text = "Clear";
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // pencilButton
             // 

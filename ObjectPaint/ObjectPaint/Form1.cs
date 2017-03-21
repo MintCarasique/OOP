@@ -26,7 +26,7 @@ namespace ObjectPaint
             if (temp != null && press)
             {
                 two = e.Location;
-                if (temp is DrawLine)
+                if (temp is DrawPencil)
                 {
                     temp.Draw(Bmp, x, y, h, w, one, two);
                     shapePictureBox.Image = Bmp;
@@ -40,7 +40,7 @@ namespace ObjectPaint
         {
             if (temp != null && press)
             {
-                if (!(temp is DrawLine))
+                if (!(temp is DrawPencil))
                 {
                     countCanvasPoints();
                     temp.DrawE(x, y, h, w, one, two, e);
@@ -50,7 +50,7 @@ namespace ObjectPaint
 
         private void lineButton_Click(object sender, EventArgs e)
         {
-            DrawLine temp = new DrawLine(Current, penWidth);
+            DrawPencil temp = new DrawPencil(Current, penWidth);
             this.temp = temp;
         }
 
@@ -76,6 +76,16 @@ namespace ObjectPaint
         private void widthTrackBar_Scroll(object sender, EventArgs e)
         {
             penWidth = widthTrackBar.Value;
+            
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            shapePictureBox.Image = null;
+            Bmp.Dispose();
+            shp.Clear();
+            Bitmap bmp = new Bitmap(shapePictureBox.Width, shapePictureBox.Height);
+            Bmp = bmp;
         }
 
         private void mainForm_Load(object sender, EventArgs e)

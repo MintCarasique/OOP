@@ -8,12 +8,12 @@ using System.Windows.Forms;
 
 namespace ObjectPaint
 {
-    class DrawLine : Shape
+    class DrawPencil : Shape
     {
         private Color clr;
-        private int pWidth;
+        public int pWidth;
 
-        public DrawLine(Color clr, int pWidth)
+        public DrawPencil(Color clr, int pWidth)
         {
             this.clr = clr;
             this.pWidth = pWidth;
