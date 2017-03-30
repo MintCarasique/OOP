@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ObjectPaint
@@ -18,18 +13,18 @@ namespace ObjectPaint
         private Point one;
         private Point two;
         private Color Current = Color.Black;
-        private Shape temp;
+        private Shape figure;
         private int x, y, w, h;
         private int penWidth = 1;
 
         private void shapePictureBox_MouseMove(object sender, MouseEventArgs e)
         {
-            if (temp != null && press)
+            if (figure != null && press)
             {
                 two = e.Location;
-                if (temp is DrawPencil)
+                if (figure is DrawPencil)
                 {                    
-                    temp.Draw(Bmp, x, y, h, w, one, two);
+                    figure.Draw(Bmp, x, y, h, w, one, two);
                     shapePictureBox.Image = Bmp;
                     one = two;
                 }
@@ -39,13 +34,12 @@ namespace ObjectPaint
 
         private void shapePictureBox_Paint(object sender, PaintEventArgs e)
         {
-            if (temp != null && press)
-            {
-                
-                if (!(temp is DrawPencil))
+            if (figure != null && press)
+            {                
+                if (!(figure is DrawPencil))
                 {
                     countCanvasPoints();
-                    temp.DrawE(x, y, h, w, one, two, e);
+                    figure.DrawE(x, y, h, w, one, two, e);
                 }
             }
         }
@@ -53,22 +47,25 @@ namespace ObjectPaint
         private void pencilButton_Click(object sender, EventArgs e)
         {
             DrawPencil temp = new DrawPencil(Current, penWidth);
-            this.temp = temp;
+            this.figure = temp;
+
+            //string temp1 = "ghu";
+            //int figure1 = temp1;
         }
 
         private void shapePictureBox_MouseUp(object sender, MouseEventArgs e)
         {
-            if (temp != null)
+            if (figure != null)
             {
                 press = false;
-                Bmp = temp.Draw(Bmp, x, y, h, w, one, two);
+                Bmp = figure.Draw(Bmp, x, y, h, w, one, two);
                 shapePictureBox.Image = Bmp;
             }
         }
 
         private void shapePictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            if (temp != null)
+            if (figure != null)
             {
                 press = true;
                 one = e.Location;
@@ -92,31 +89,30 @@ namespace ObjectPaint
         private void lineButton_Click_1(object sender, EventArgs e)
         {
             DrawStraightLine temp = new DrawStraightLine(Current, penWidth);
-            this.temp = temp;
+            this.figure = temp;
         }
 
         private void rectangleButton_Click(object sender, EventArgs e)
         {
-            DrawRectangle temp = new DrawRectangle(Current, penWidth);
-            this.temp = temp;
+            figure = new DrawRectangle(Current, penWidth);
         }
 
         private void circleButton_Click(object sender, EventArgs e)
         {
             DrawCircle temp = new DrawCircle(Current, penWidth);
-            this.temp = temp;
+            this.figure = temp;
         }
 
         private void triangleButton_Click(object sender, EventArgs e)
         {
             DrawTriangle temp = new DrawTriangle(Current, penWidth);
-            this.temp = temp;
+            this.figure = temp;
         }
 
         private void curveButton_Click(object sender, EventArgs e)
         {
             DrawCurve temp = new DrawCurve(Current, penWidth);
-            this.temp = temp;
+            this.figure = temp;
         }
 
         private void mainForm_Load(object sender, EventArgs e)
